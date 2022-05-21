@@ -17,6 +17,7 @@ import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.Holder;
 
+import net.mcreator.peencraft.world.features.ores.ZachoreFeature;
 import net.mcreator.peencraft.world.features.ores.TestFeature;
 import net.mcreator.peencraft.PeencraftMod;
 
@@ -31,6 +32,8 @@ public class PeencraftModFeatures {
 	private static final List<FeatureRegistration> FEATURE_REGISTRATIONS = new ArrayList<>();
 	public static final RegistryObject<Feature<?>> FAKEDIAMOND = register("fakediamond", TestFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, TestFeature.GENERATE_BIOMES, TestFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> ZACHORE = register("zachore", ZachoreFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, ZachoreFeature.GENERATE_BIOMES, ZachoreFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

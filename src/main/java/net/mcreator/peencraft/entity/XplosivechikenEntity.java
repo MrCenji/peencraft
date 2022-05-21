@@ -93,7 +93,7 @@ public class XplosivechikenEntity extends Monster {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.chicken.ambient"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("ambient.soul_sand_valley.mood"));
 	}
 
 	@Override
@@ -169,7 +169,7 @@ public class XplosivechikenEntity extends Monster {
 			double dx = (random.nextFloat() - 0.5D) * 0.5D;
 			double dy = (random.nextFloat() - 0.5D) * 0.5D;
 			double dz = (random.nextFloat() - 0.5D) * 0.5D;
-			world.addParticle(ParticleTypes.ELECTRIC_SPARK, x0, y0, z0, dx, dy, dz);
+			world.addParticle(ParticleTypes.EXPLOSION, x0, y0, z0, dx, dy, dz);
 		}
 	}
 
@@ -182,7 +182,7 @@ public class XplosivechikenEntity extends Monster {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.1);
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 1);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 1);
