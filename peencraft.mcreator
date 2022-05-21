@@ -6,7 +6,7 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "test"
+      "registry_name": "fakediamond"
     },
     {
       "name": "ChanceOfLightning",
@@ -35,13 +35,63 @@
           }
         ]
       }
+    },
+    {
+      "name": "WoodArmor",
+      "type": "armor",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "WoodArmorHelmetRecipe",
+      "type": "recipe",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_armor_helmet_recipe"
+    },
+    {
+      "name": "WoodArmorBodyRecipe",
+      "type": "recipe",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_armor_body_recipe"
+    },
+    {
+      "name": "WoodArmorLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_armor_leggings_recipe"
+    },
+    {
+      "name": "WoodArmorBootsRecipe",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_armor_boots_recipe"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.peencraft.test": "Test"
+      "item.peencraft.wood_armor_leggings": "Wood Leggings",
+      "item.peencraft.wood_armor_chestplate": "Wood Chestplate",
+      "item.peencraft.wood_armor_helmet": "Wood Helmet",
+      "item.peencraft.wood_armor_boots": "Wood Boots",
+      "block.peencraft.fakediamond": "Diamond Ore"
     }
   },
   "foldersRoot": {

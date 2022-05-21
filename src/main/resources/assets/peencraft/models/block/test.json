@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "peencraft:blocks/tsm-myth1-e1539593670753",
-    "particle": "peencraft:blocks/tsm-myth1-e1539593670753"
-  }
-}

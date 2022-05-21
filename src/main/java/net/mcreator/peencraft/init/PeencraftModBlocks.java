@@ -15,5 +15,5 @@ import net.mcreator.peencraft.PeencraftMod;
 
 public class PeencraftModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, PeencraftMod.MODID);
-	public static final RegistryObject<Block> TEST = REGISTRY.register("test", () -> new TestBlock());
+	public static final RegistryObject<Block> FAKEDIAMOND = REGISTRY.register("fakediamond", () -> new TestBlock());
 }

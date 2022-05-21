@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "peencraft:blocks/diamond_ore",
+    "particle": "peencraft:blocks/diamond_ore"
+  }
+}
