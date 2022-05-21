@@ -26,6 +26,8 @@ public class PeencraftModItems {
 	public static final RegistryObject<Item> WOOD_ARMOR_BOOTS = REGISTRY.register("wood_armor_boots", () -> new WoodArmorItem.Boots());
 	public static final RegistryObject<Item> XPLOSIVECHIKEN = REGISTRY.register("xplosivechiken_spawn_egg",
 			() -> new ForgeSpawnEggItem(PeencraftModEntities.XPLOSIVECHIKEN, -1, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> TYRONE = REGISTRY.register("tyrone_spawn_egg",
+			() -> new ForgeSpawnEggItem(PeencraftModEntities.TYRONE, -10079488, -6737152, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

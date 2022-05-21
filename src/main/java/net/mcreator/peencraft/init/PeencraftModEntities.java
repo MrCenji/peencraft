@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.peencraft.entity.XplosivechikenEntity;
+import net.mcreator.peencraft.entity.TyroneEntity;
 import net.mcreator.peencraft.PeencraftMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -25,6 +26,11 @@ public class PeencraftModEntities {
 	public static final RegistryObject<EntityType<XplosivechikenEntity>> XPLOSIVECHIKEN = register("xplosivechiken",
 			EntityType.Builder.<XplosivechikenEntity>of(XplosivechikenEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(200).setUpdateInterval(3).setCustomClientFactory(XplosivechikenEntity::new).fireImmune().sized(0.4f, 0.7f));
+	public static final RegistryObject<EntityType<TyroneEntity>> TYRONE = register("tyrone",
+			EntityType.Builder.<TyroneEntity>of(TyroneEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128)
+					.setUpdateInterval(3).setCustomClientFactory(TyroneEntity::new)
+
+					.sized(0.7f, 2.25f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -34,11 +40,13 @@ public class PeencraftModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			XplosivechikenEntity.init();
+			TyroneEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(XPLOSIVECHIKEN.get(), XplosivechikenEntity.createAttributes().build());
+		event.put(TYRONE.get(), TyroneEntity.createAttributes().build());
 	}
 }
