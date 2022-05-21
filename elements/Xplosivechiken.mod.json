@@ -49,7 +49,7 @@
     "attackStrength": 1,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
-    "movementSpeed": 0.1,
+    "movementSpeed": 0.30000000000000004,
     "armorBaseValue": 1.0,
     "trackingRange": 200,
     "health": 10,
@@ -80,7 +80,7 @@
       "value": ""
     },
     "livingSound": {
-      "value": "ambient.soul_sand_valley.mood"
+      "value": "entity.chicken.ambient"
     },
     "hurtSound": {
       "value": "entity.endermen.scream"
@@ -93,7 +93,7 @@
     },
     "spawnParticles": true,
     "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
+      "value": "ELECTRIC_SPARK"
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
