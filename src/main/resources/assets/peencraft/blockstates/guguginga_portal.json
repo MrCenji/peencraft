@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "peencraft:block/guguginga_portal_ew"
+    },
+    "axis=x": {
+      "model": "peencraft:block/guguginga_portal_ns"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "_fv": 28,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:Everything"
+      },
+      {
+        "value": "CUSTOM:Obsidiantreebiome"
+      },
+      {
+        "value": "CUSTOM:Quartztreebiome"
+      }
+    ],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "CUSTOM:Zachore"
+    },
+    "fluidBlock": {
+      "value": "CUSTOM:Test"
+    },
+    "canRespawnHere": false,
+    "hasFog": false,
+    "isDark": false,
+    "doesWaterVaporize": false,
+    "sleepResult": "ALLOW",
+    "hasSkyLight": false,
+    "imitateOverworldBehaviour": false,
+    "portalFrame": {
+      "value": "CUSTOM:Zachore"
+    },
+    "portalParticles": {
+      "value": "CLOUD"
+    },
+    "portalLuminance": 3,
+    "portalSound": {
+      "value": "record.stal"
+    },
+    "igniterName": "Guguginga Portal Igniter",
+    "igniterTab": {
+      "value": "TOOLS"
+    },
+    "texture": "gugugingaignitor",
+    "portalTexture": "gugugingaportal",
+    "enablePortal": true
+  }
+}
