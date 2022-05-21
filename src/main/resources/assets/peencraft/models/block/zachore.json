@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "peencraft:blocks/0823b7e1-d0a7-4752-ae3e-f01381a8615c",
-    "particle": "peencraft:blocks/0823b7e1-d0a7-4752-ae3e-f01381a8615c"
+    "all": "peencraft:blocks/zuch",
+    "particle": "peencraft:blocks/zuch"
   }
 }

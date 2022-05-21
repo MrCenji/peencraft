@@ -15,6 +15,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.BlockItem;
 
 import net.mcreator.peencraft.item.WoodArmorItem;
+import net.mcreator.peencraft.item.RocksItem;
 import net.mcreator.peencraft.PeencraftMod;
 
 public class PeencraftModItems {
@@ -29,6 +30,7 @@ public class PeencraftModItems {
 	public static final RegistryObject<Item> TYRONE = REGISTRY.register("tyrone_spawn_egg",
 			() -> new ForgeSpawnEggItem(PeencraftModEntities.TYRONE, -10079488, -6737152, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> ZACHORE = block(PeencraftModBlocks.ZACHORE, CreativeModeTab.TAB_BUILDING_BLOCKS);
+	public static final RegistryObject<Item> ROCKS = REGISTRY.register("rocks", () -> new RocksItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

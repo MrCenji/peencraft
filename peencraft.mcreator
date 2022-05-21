@@ -121,6 +121,30 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "zachore"
+    },
+    {
+      "name": "Rocks",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rocks"
+    },
+    {
+      "name": "StoneDropsRocks",
+      "type": "loottable",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_drops_rocks"
+    },
+    {
+      "name": "RocksToStone",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rocks_to_stone"
     }
   ],
   "variable_elements": [],
@@ -133,6 +157,7 @@
       "item.peencraft.wood_armor_boots": "Wood Boots",
       "block.peencraft.zachore": "Zachore",
       "biome.peencraft.everything": "Everything",
+      "item.peencraft.rocks": "Rocks",
       "entity.peencraft.xplosivechiken": "Xplosivechiken",
       "item.peencraft.wood_armor_chestplate": "Wood Chestplate",
       "item.peencraft.xplosivechiken_spawn_egg": "Xplosivechiken Spawn Egg",
