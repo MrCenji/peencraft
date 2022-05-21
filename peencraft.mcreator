@@ -81,6 +81,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "wood_armor_boots_recipe"
+    },
+    {
+      "name": "Everything",
+      "type": "biome",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "everything"
     }
   ],
   "variable_elements": [],
@@ -91,7 +99,8 @@
       "item.peencraft.wood_armor_chestplate": "Wood Chestplate",
       "item.peencraft.wood_armor_helmet": "Wood Helmet",
       "item.peencraft.wood_armor_boots": "Wood Boots",
-      "block.peencraft.fakediamond": "Diamond Ore"
+      "block.peencraft.fakediamond": "Diamond Ore",
+      "biome.peencraft.everything": "Everything"
     }
   },
   "foldersRoot": {

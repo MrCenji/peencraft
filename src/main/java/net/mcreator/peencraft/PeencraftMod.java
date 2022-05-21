@@ -29,6 +29,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.mcreator.peencraft.init.PeencraftModItems;
 import net.mcreator.peencraft.init.PeencraftModFeatures;
 import net.mcreator.peencraft.init.PeencraftModBlocks;
+import net.mcreator.peencraft.init.PeencraftModBiomes;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -50,6 +51,8 @@ public class PeencraftMod {
 		PeencraftModItems.REGISTRY.register(bus);
 
 		PeencraftModFeatures.REGISTRY.register(bus);
+
+		PeencraftModBiomes.REGISTRY.register(bus);
 
 	}
 
