@@ -97,7 +97,7 @@
     },
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "particleAmount": 0,
     "whenMobDies": {
       "name": "ChanceOfLightning"
     },

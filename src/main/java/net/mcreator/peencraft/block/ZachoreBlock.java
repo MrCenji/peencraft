@@ -18,7 +18,7 @@ import java.util.Collections;
 
 public class ZachoreBlock extends Block {
 	public ZachoreBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.5f, 5f).requiresCorrectToolForDrops().jumpFactor(5f));
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.75f, 5f).requiresCorrectToolForDrops().jumpFactor(5f));
 	}
 
 	@Override

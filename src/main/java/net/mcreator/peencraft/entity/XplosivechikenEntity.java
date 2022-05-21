@@ -162,7 +162,7 @@ public class XplosivechikenEntity extends Monster {
 		double z = this.getZ();
 		Entity entity = this;
 		Level world = this.level;
-		for (int l = 0; l < 4; ++l) {
+		for (int l = 0; l < 0; ++l) {
 			double x0 = x + random.nextFloat();
 			double y0 = y + random.nextFloat();
 			double z0 = z + random.nextFloat();
