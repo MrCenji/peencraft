@@ -26,6 +26,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.peencraft.init.PeencraftModItems;
+import net.mcreator.peencraft.init.PeencraftModBlocks;
+
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -42,6 +45,8 @@ public class PeencraftMod {
 	public PeencraftMod() {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		PeencraftModBlocks.REGISTRY.register(bus);
+		PeencraftModItems.REGISTRY.register(bus);
 
 	}
 

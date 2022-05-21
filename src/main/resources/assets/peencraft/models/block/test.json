@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "peencraft:blocks/creeper_in_a_suit",
+    "particle": "peencraft:blocks/creeper_in_a_suit"
+  }
+}
