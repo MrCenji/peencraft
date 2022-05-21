@@ -1,7 +1,27 @@
 {
   "variants": {
-    "": {
+    "facing=north": {
       "model": "peencraft:block/test"
+    },
+    "facing=east": {
+      "model": "peencraft:block/test",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "peencraft:block/test",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "peencraft:block/test",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "peencraft:block/test",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "peencraft:block/test",
+      "x": 90
     }
   }
 }
