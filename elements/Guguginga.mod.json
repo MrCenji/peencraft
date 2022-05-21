@@ -17,13 +17,13 @@
     "fluidBlock": {
       "value": "CUSTOM:GugugingaStone"
     },
-    "canRespawnHere": false,
+    "canRespawnHere": true,
     "hasFog": false,
     "isDark": false,
     "doesWaterVaporize": false,
     "sleepResult": "ALLOW",
     "hasSkyLight": false,
-    "imitateOverworldBehaviour": false,
+    "imitateOverworldBehaviour": true,
     "portalFrame": {
       "value": "CUSTOM:Zachore"
     },

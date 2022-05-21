@@ -32,7 +32,6 @@ import net.minecraft.core.Holder;
 
 import net.mcreator.peencraft.world.biome.QuartztreebiomeBiome;
 import net.mcreator.peencraft.world.biome.ObsidiantreebiomeBiome;
-import net.mcreator.peencraft.world.biome.EverythingBiome;
 import net.mcreator.peencraft.PeencraftMod;
 
 import java.util.Map;
@@ -44,14 +43,12 @@ import com.mojang.datafixers.util.Pair;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PeencraftModBiomes {
 	public static final DeferredRegister<Biome> REGISTRY = DeferredRegister.create(ForgeRegistries.BIOMES, PeencraftMod.MODID);
-	public static final RegistryObject<Biome> EVERYTHING = REGISTRY.register("everything", () -> EverythingBiome.createBiome());
 	public static final RegistryObject<Biome> OBSIDIANTREEBIOME = REGISTRY.register("obsidiantreebiome", () -> ObsidiantreebiomeBiome.createBiome());
 	public static final RegistryObject<Biome> QUARTZTREEBIOME = REGISTRY.register("quartztreebiome", () -> QuartztreebiomeBiome.createBiome());
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			EverythingBiome.init();
 			ObsidiantreebiomeBiome.init();
 			QuartztreebiomeBiome.init();
 		});
@@ -72,8 +69,6 @@ public class PeencraftModBiomes {
 					// Inject biomes to biome source
 					if (chunkGenerator.getBiomeSource() instanceof MultiNoiseBiomeSource noiseSource) {
 						List<Pair<Climate.ParameterPoint, Holder<Biome>>> parameters = new ArrayList<>(noiseSource.parameters.values());
-						parameters.add(new Pair<>(EverythingBiome.PARAMETER_POINT,
-								biomeRegistry.getOrCreateHolder(ResourceKey.create(Registry.BIOME_REGISTRY, EVERYTHING.getId()))));
 						parameters.add(new Pair<>(ObsidiantreebiomeBiome.PARAMETER_POINT,
 								biomeRegistry.getOrCreateHolder(ResourceKey.create(Registry.BIOME_REGISTRY, OBSIDIANTREEBIOME.getId()))));
 						parameters.add(new Pair<>(QuartztreebiomeBiome.PARAMETER_POINT,
@@ -98,8 +93,6 @@ public class PeencraftModBiomes {
 									Blocks.MOSS_BLOCK.defaultBlockState(), Blocks.CALCITE.defaultBlockState(), Blocks.OBSIDIAN.defaultBlockState()));
 							surfaceRules.add(1, anySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, QUARTZTREEBIOME.getId()),
 									Blocks.MOSS_BLOCK.defaultBlockState(), Blocks.CALCITE.defaultBlockState(), Blocks.OBSIDIAN.defaultBlockState()));
-							surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, EVERYTHING.getId()),
-									Blocks.GRASS_BLOCK.defaultBlockState(), Blocks.STONE.defaultBlockState(), Blocks.GRANITE.defaultBlockState()));
 							surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, OBSIDIANTREEBIOME.getId()),
 									Blocks.MOSS_BLOCK.defaultBlockState(), Blocks.CALCITE.defaultBlockState(), Blocks.OBSIDIAN.defaultBlockState()));
 							surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, QUARTZTREEBIOME.getId()),

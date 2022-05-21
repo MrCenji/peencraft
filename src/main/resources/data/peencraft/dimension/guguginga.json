@@ -45,8 +45,8 @@
               1.014285714286
             ],
             "continentalness": [
-              0.295714285714,
-              0.724285714286
+              0.335714285714,
+              0.764285714286
             ],
             "weirdness": [
               -0.398916561604,
@@ -66,12 +66,12 @@
       "name": "peencraft:guguginga",
       "sea_level": 63,
       "legacy_random_source": false,
-      "disable_mob_generation": true,
-      "noodle_caves_enabled": false,
-      "noise_caves_enabled": false,
-      "aquifers_enabled": false,
-      "deepslate_enabled": false,
-      "ore_veins_enabled": false,
+      "disable_mob_generation": false,
+      "noodle_caves_enabled": true,
+      "noise_caves_enabled": true,
+      "aquifers_enabled": true,
+      "deepslate_enabled": true,
+      "ore_veins_enabled": true,
       "default_block": {
         "Name": "minecraft:gravel"
       },

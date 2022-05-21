@@ -41,7 +41,7 @@
     "biomeCategory": "SAVANNA",
     "rainingPossibility": 0.9,
     "temperature": 0.5,
-    "baseHeight": 0.1,
+    "baseHeight": 0.5,
     "heightVariation": 0.0,
     "spawnBiome": true,
     "spawnBiomeNether": false,

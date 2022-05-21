@@ -83,14 +83,6 @@
       "registry_name": "wood_armor_boots_recipe"
     },
     {
-      "name": "Everything",
-      "type": "biome",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "everything"
-    },
-    {
       "name": "Obsidiantreebiome",
       "type": "biome",
       "sortid": 9,
@@ -204,7 +196,6 @@
       "item.peencraft.wood_armor_boots": "Wood Boots",
       "block.peencraft.zachore": "Zach Ore",
       "block.peencraft.guguginga_stone": "Guguginga Stone",
-      "biome.peencraft.everything": "Everything",
       "item.peencraft.rocks": "Rocks",
       "block.peencraft.goo": "Goo",
       "fluid.peencraft.goo": "Goo",
