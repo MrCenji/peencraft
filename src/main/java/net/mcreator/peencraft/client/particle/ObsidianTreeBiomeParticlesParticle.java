@@ -37,8 +37,8 @@ public class ObsidianTreeBiomeParticlesParticle extends TextureSheetParticle {
 			SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
-		this.setSize(0.1f, 0.1f);
-		this.quadSize *= 0.8f;
+		this.setSize(0.3f, 0.3f);
+		this.quadSize *= 1.5f;
 		this.lifetime = 7;
 		this.gravity = 0f;
 		this.hasPhysics = true;
