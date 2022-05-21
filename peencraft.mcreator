@@ -131,20 +131,20 @@
       "registry_name": "rocks"
     },
     {
-      "name": "StoneDropsRocks",
-      "type": "loottable",
-      "sortid": 13,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stone_drops_rocks"
-    },
-    {
       "name": "RocksToStone",
       "type": "recipe",
       "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rocks_to_stone"
+    },
+    {
+      "name": "StoneDropsRock",
+      "type": "loottable",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_drops_rock"
     }
   ],
   "variable_elements": [],
