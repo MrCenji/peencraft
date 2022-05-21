@@ -172,6 +172,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "guguginga_stone"
+    },
+    {
+      "name": "ObsidianTreeBiomeParticles",
+      "type": "particle",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "obsidian_tree_biome_particles"
     }
   ],
   "variable_elements": [],

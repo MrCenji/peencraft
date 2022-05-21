@@ -26,6 +26,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.peencraft.init.PeencraftModParticleTypes;
 import net.mcreator.peencraft.init.PeencraftModItems;
 import net.mcreator.peencraft.init.PeencraftModFeatures;
 import net.mcreator.peencraft.init.PeencraftModEntities;
@@ -55,7 +56,7 @@ public class PeencraftMod {
 		PeencraftModFeatures.REGISTRY.register(bus);
 
 		PeencraftModBiomes.REGISTRY.register(bus);
-
+		PeencraftModParticleTypes.REGISTRY.register(bus);
 	}
 
 	public static <T> void addNetworkMessage(Class<T> messageType, BiConsumer<T, FriendlyByteBuf> encoder, Function<FriendlyByteBuf, T> decoder,

@@ -35,9 +35,9 @@
     "moodSoundDelay": 6000,
     "spawnParticles": true,
     "particleToSpawn": {
-      "value": "SPIT"
+      "value": "CUSTOM:ObsidianTreeBiomeParticles"
     },
-    "particlesProbability": 5.0,
+    "particlesProbability": 3.5,
     "biomeCategory": "SAVANNA",
     "rainingPossibility": 0.9,
     "temperature": 0.5,

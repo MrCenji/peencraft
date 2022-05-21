@@ -30,9 +30,10 @@ import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.features.VegetationFeatures;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 
 import net.mcreator.peencraft.world.features.treedecorators.ObsidiantreebiomeFruitDecorator;
+import net.mcreator.peencraft.init.PeencraftModParticleTypes;
 
 import java.util.List;
 
@@ -51,7 +52,9 @@ public class ObsidiantreebiomeBiome {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-10066177).waterColor(-10066330).waterFogColor(329011)
 				.skyColor(-10066177).foliageColorOverride(10387789).grassColorOverride(9470285)
 				.ambientLoopSound(new SoundEvent(new ResourceLocation("ambient.cave")))
-				.ambientParticle(new AmbientParticleSettings(ParticleTypes.SPIT, 0.05f)).build();
+				.ambientParticle(
+						new AmbientParticleSettings((SimpleParticleType) (PeencraftModParticleTypes.OBSIDIAN_TREE_BIOME_PARTICLES.get()), 0.035f))
+				.build();
 		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder();
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
 				PlacementUtils.register("peencraft:tree_obsidiantreebiome",

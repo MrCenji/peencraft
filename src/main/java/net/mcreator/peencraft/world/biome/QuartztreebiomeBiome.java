@@ -51,7 +51,7 @@ public class QuartztreebiomeBiome {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-10066177).waterColor(-65536).waterFogColor(329011)
 				.skyColor(-10066177).foliageColorOverride(10387789).grassColorOverride(9470285)
 				.ambientLoopSound(new SoundEvent(new ResourceLocation("ambient.cave")))
-				.ambientParticle(new AmbientParticleSettings(ParticleTypes.SPIT, 0.05f)).build();
+				.ambientParticle(new AmbientParticleSettings(ParticleTypes.SPIT, 0.035f)).build();
 		BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder();
 		biomeGenerationSettings.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, PlacementUtils.register("peencraft:tree_quartztreebiome",
 				FeatureUtils.register("peencraft:tree_quartztreebiome", Feature.TREE,
