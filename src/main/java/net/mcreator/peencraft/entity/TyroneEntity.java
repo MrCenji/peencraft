@@ -13,10 +13,13 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
@@ -40,7 +43,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.peencraft.init.PeencraftModEntities;
 
 @Mod.EventBusSubscriber
-public class TyroneEntity extends Monster {
+public class TyroneEntity extends EnderMan {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
 		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(PeencraftModEntities.TYRONE.get(), 6, 1, 1));
@@ -75,6 +78,8 @@ public class TyroneEntity extends Monster {
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));
+		this.goalSelector.addGoal(7, new TemptGoal(this, 1, Ingredient.of(Items.COOKED_CHICKEN), false));
+		this.goalSelector.addGoal(8, new TemptGoal(this, 1, Ingredient.of(Items.MELON_SLICE), false));
 	}
 
 	@Override
@@ -117,7 +122,7 @@ public class TyroneEntity extends Monster {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.6);
-		builder = builder.add(Attributes.MAX_HEALTH, 50);
+		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0.1);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
