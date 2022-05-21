@@ -122,10 +122,18 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "spawnWorldTypes": [
-      "CUSTOM:Guguginga"
+      "CUSTOM:Guguginga",
+      "Surface"
     ],
     "restrictionBiomes": [],
-    "blocksToReplace": [],
+    "blocksToReplace": [
+      {
+        "value": "CUSTOM:GugugingaStone"
+      },
+      {
+        "value": "Blocks.STONE#0"
+      }
+    ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 12,
     "frequencyOnChunk": 5,

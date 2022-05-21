@@ -19,6 +19,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.Level;
@@ -55,7 +56,7 @@ public class ZachoreFeature extends OreFeature {
 
 	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
 	private final Set<ResourceKey<Level>> generate_dimensions = Set
-			.of(ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("peencraft:guguginga")));
+			.of(ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("peencraft:guguginga")), Level.OVERWORLD);
 
 	public ZachoreFeature() {
 		super(OreConfiguration.CODEC);
@@ -83,7 +84,7 @@ public class ZachoreFeature extends OreFeature {
 
 		public boolean test(BlockState blockAt, Random random) {
 			if (base_blocks == null) {
-				base_blocks = List.of();
+				base_blocks = List.of(PeencraftModBlocks.GUGUGINGA_STONE.get(), Blocks.STONE);
 			}
 			return base_blocks.contains(blockAt.getBlock());
 		}
