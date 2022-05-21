@@ -36,6 +36,8 @@ public class PeencraftModItems {
 	public static final RegistryObject<Item> GUGUGINGA = REGISTRY.register("guguginga", () -> new GugugingaItem());
 	public static final RegistryObject<Item> GUGUGINGA_STONE = block(PeencraftModBlocks.GUGUGINGA_STONE, CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Item> GOO_BUCKET = REGISTRY.register("goo_bucket", () -> new GooItem());
+	public static final RegistryObject<Item> KILLER_MOUSE = REGISTRY.register("killer_mouse_spawn_egg",
+			() -> new ForgeSpawnEggItem(PeencraftModEntities.KILLER_MOUSE, -10079488, -65536, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

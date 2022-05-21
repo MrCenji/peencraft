@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.peencraft.client.renderer.XplosivechikenRenderer;
 import net.mcreator.peencraft.client.renderer.TyroneRenderer;
+import net.mcreator.peencraft.client.renderer.KillerMouseRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class PeencraftModEntityRenderers {
@@ -18,5 +19,6 @@ public class PeencraftModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(PeencraftModEntities.XPLOSIVECHIKEN.get(), XplosivechikenRenderer::new);
 		event.registerEntityRenderer(PeencraftModEntities.TYRONE.get(), TyroneRenderer::new);
+		event.registerEntityRenderer(PeencraftModEntities.KILLER_MOUSE.get(), KillerMouseRenderer::new);
 	}
 }

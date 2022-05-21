@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.peencraft.entity.XplosivechikenEntity;
 import net.mcreator.peencraft.entity.TyroneEntity;
+import net.mcreator.peencraft.entity.KillerMouseEntity;
 import net.mcreator.peencraft.PeencraftMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -31,6 +32,11 @@ public class PeencraftModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(TyroneEntity::new)
 
 					.sized(0.7f, 2.25f));
+	public static final RegistryObject<EntityType<KillerMouseEntity>> KILLER_MOUSE = register("killer_mouse",
+			EntityType.Builder.<KillerMouseEntity>of(KillerMouseEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KillerMouseEntity::new)
+
+					.sized(0.7999999999999999f, 2.2f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -41,6 +47,7 @@ public class PeencraftModEntities {
 		event.enqueueWork(() -> {
 			XplosivechikenEntity.init();
 			TyroneEntity.init();
+			KillerMouseEntity.init();
 		});
 	}
 
@@ -48,5 +55,6 @@ public class PeencraftModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(XPLOSIVECHIKEN.get(), XplosivechikenEntity.createAttributes().build());
 		event.put(TYRONE.get(), TyroneEntity.createAttributes().build());
+		event.put(KILLER_MOUSE.get(), KillerMouseEntity.createAttributes().build());
 	}
 }
