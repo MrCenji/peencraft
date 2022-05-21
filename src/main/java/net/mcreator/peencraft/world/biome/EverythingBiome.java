@@ -42,10 +42,10 @@ import java.util.List;
 import com.google.common.collect.ImmutableList;
 
 public class EverythingBiome {
-	public static final Climate.ParameterPoint PARAMETER_POINT = new Climate.ParameterPoint(Climate.Parameter.span(-0.380952380952f, -0.15238095238f),
-			Climate.Parameter.span(0.685714285714f, 0.914285714286f), Climate.Parameter.span(0.235714285714f, 0.464285714286f),
-			Climate.Parameter.span(-0.614285714286f, -0.385714285714f), Climate.Parameter.point(0),
-			Climate.Parameter.span(0.260113640666f, 0.488685069238f), 0);
+	public static final Climate.ParameterPoint PARAMETER_POINT = new Climate.ParameterPoint(
+			Climate.Parameter.span(-0.338095238095f, -0.195238095237f), Climate.Parameter.span(0.928571428571f, 1.071428571429f),
+			Climate.Parameter.span(0.278571428571f, 0.421428571429f), Climate.Parameter.span(-0.571428571429f, -0.428571428571f),
+			Climate.Parameter.point(0), Climate.Parameter.span(0.302970783523f, 0.445827926381f), 0);
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(12638463).waterColor(4159204).waterFogColor(329011).skyColor(7972607)
@@ -90,7 +90,7 @@ public class EverythingBiome {
 		BiomeDefaultFeatures.addSurfaceFreezing(biomeGenerationSettings);
 		MobSpawnSettings.Builder mobSpawnInfo = new MobSpawnSettings.Builder();
 		return new Biome.BiomeBuilder().precipitation(Biome.Precipitation.SNOW).biomeCategory(Biome.BiomeCategory.SAVANNA).temperature(0.1f)
-				.downfall(0.9f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build()).generationSettings(biomeGenerationSettings.build())
+				.downfall(1f).specialEffects(effects).mobSpawnSettings(mobSpawnInfo.build()).generationSettings(biomeGenerationSettings.build())
 				.build();
 	}
 
