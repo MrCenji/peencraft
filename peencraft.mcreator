@@ -99,6 +99,14 @@
       "registry_name": "obsidiantreebiome"
     },
     {
+      "name": "Xplosivechiken",
+      "type": "livingentity",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xplosivechiken"
+    },
+    {
       "name": "Tyrone",
       "type": "livingentity",
       "sortid": 10,
@@ -112,14 +120,12 @@
   "language_map": {
     "en_us": {
       "item.peencraft.wood_armor_leggings": "Wood Leggings",
-      "item.peencraft.tyrone_spawn_egg": "Tyrone Spawn Egg",
       "item.peencraft.wood_armor_chestplate": "Wood Chestplate",
       "item.peencraft.wood_armor_helmet": "Wood Helmet",
       "biome.peencraft.obsidiantreebiome": "Obsidiantreebiome",
       "item.peencraft.wood_armor_boots": "Wood Boots",
       "block.peencraft.fakediamond": "Diamond Ore",
-      "biome.peencraft.everything": "Everything",
-      "entity.peencraft.tyrone": "Tyrone"
+      "biome.peencraft.everything": "Everything"
     }
   },
   "foldersRoot": {
