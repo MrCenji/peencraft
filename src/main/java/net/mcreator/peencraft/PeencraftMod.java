@@ -28,6 +28,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.peencraft.init.PeencraftModItems;
 import net.mcreator.peencraft.init.PeencraftModFeatures;
+import net.mcreator.peencraft.init.PeencraftModEntities;
 import net.mcreator.peencraft.init.PeencraftModBlocks;
 import net.mcreator.peencraft.init.PeencraftModBiomes;
 
@@ -49,6 +50,7 @@ public class PeencraftMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		PeencraftModBlocks.REGISTRY.register(bus);
 		PeencraftModItems.REGISTRY.register(bus);
+		PeencraftModEntities.REGISTRY.register(bus);
 
 		PeencraftModFeatures.REGISTRY.register(bus);
 

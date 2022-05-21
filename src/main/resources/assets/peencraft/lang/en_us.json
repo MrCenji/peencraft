@@ -1,9 +1,11 @@
 {
   "item.peencraft.wood_armor_leggings": "Wood Leggings",
+  "item.peencraft.tyrone_spawn_egg": "Tyrone Spawn Egg",
   "item.peencraft.wood_armor_chestplate": "Wood Chestplate",
   "item.peencraft.wood_armor_helmet": "Wood Helmet",
   "biome.peencraft.obsidiantreebiome": "Obsidiantreebiome",
   "item.peencraft.wood_armor_boots": "Wood Boots",
   "block.peencraft.fakediamond": "Diamond Ore",
-  "biome.peencraft.everything": "Everything"
+  "biome.peencraft.everything": "Everything",
+  "entity.peencraft.tyrone": "Tyrone"
 }
