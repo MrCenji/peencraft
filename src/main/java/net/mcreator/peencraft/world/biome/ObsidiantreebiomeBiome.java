@@ -40,13 +40,13 @@ import java.util.List;
 import com.google.common.collect.ImmutableList;
 
 public class ObsidiantreebiomeBiome {
-	public static final Climate.ParameterPoint PARAMETER_POINT = new Climate.ParameterPoint(Climate.Parameter.span(-0.428571428571f, 0.428571428571f),
-			Climate.Parameter.span(0.371428571429f, 1.228571428571f), Climate.Parameter.span(0.081428571429f, 0.938571428571f),
-			Climate.Parameter.span(0.571428571429f, 1.428571428571f), Climate.Parameter.point(0),
-			Climate.Parameter.span(-1.194092129683f, -0.336949272541f), 0);
+	public static final Climate.ParameterPoint PARAMETER_POINT = new Climate.ParameterPoint(Climate.Parameter.span(-0.214285714286f, 0.214285714286f),
+			Climate.Parameter.span(0.585714285714f, 1.014285714286f), Climate.Parameter.span(0.295714285714f, 0.724285714286f),
+			Climate.Parameter.span(0.785714285714f, 1.214285714286f), Climate.Parameter.point(0),
+			Climate.Parameter.span(-0.979806415398f, -0.551234986826f), 0);
 	public static final Climate.ParameterPoint PARAMETER_POINT_UNDERGROUND = new Climate.ParameterPoint(Climate.Parameter.span(-1, 1),
-			Climate.Parameter.span(-1, 1), Climate.Parameter.span(-2.49f, 3.51f), Climate.Parameter.span(-2f, 4f), Climate.Parameter.span(0.2f, 0.9f),
-			Climate.Parameter.span(-3.765520701112f, 2.234479298888f), 0);
+			Climate.Parameter.span(-1, 1), Climate.Parameter.span(-0.99f, 2.01f), Climate.Parameter.span(-0.5f, 2.5f),
+			Climate.Parameter.span(0.2f, 0.9f), Climate.Parameter.span(-2.265520701112f, 0.734479298888f), 0);
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-10066177).waterColor(-10066330).waterFogColor(329011)

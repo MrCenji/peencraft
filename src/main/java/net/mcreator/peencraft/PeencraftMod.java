@@ -28,6 +28,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.peencraft.init.PeencraftModParticleTypes;
 import net.mcreator.peencraft.init.PeencraftModItems;
+import net.mcreator.peencraft.init.PeencraftModFluids;
 import net.mcreator.peencraft.init.PeencraftModFeatures;
 import net.mcreator.peencraft.init.PeencraftModEntities;
 import net.mcreator.peencraft.init.PeencraftModBlocks;
@@ -54,6 +55,7 @@ public class PeencraftMod {
 		PeencraftModEntities.REGISTRY.register(bus);
 
 		PeencraftModFeatures.REGISTRY.register(bus);
+		PeencraftModFluids.REGISTRY.register(bus);
 
 		PeencraftModBiomes.REGISTRY.register(bus);
 		PeencraftModParticleTypes.REGISTRY.register(bus);

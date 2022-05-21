@@ -180,6 +180,17 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "obsidian_tree_biome_particles"
+    },
+    {
+      "name": "Goo",
+      "type": "fluid",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goo",
+      "metadata": {
+        "gb": true
+      }
     }
   ],
   "variable_elements": [],
@@ -188,12 +199,15 @@
     "en_us": {
       "item.peencraft.wood_armor_leggings": "Wood Leggings",
       "item.peencraft.tyrone_spawn_egg": "Tyrone Spawn Egg",
+      "item.peencraft.goo_bucket": "Goo Bucket",
       "biome.peencraft.obsidiantreebiome": "Obsidiantreebiome",
       "item.peencraft.wood_armor_boots": "Wood Boots",
       "block.peencraft.zachore": "Zach Ore",
       "block.peencraft.guguginga_stone": "Guguginga Stone",
       "biome.peencraft.everything": "Everything",
       "item.peencraft.rocks": "Rocks",
+      "block.peencraft.goo": "Goo",
+      "fluid.peencraft.goo": "Goo",
       "entity.peencraft.xplosivechiken": "Xplosivechiken",
       "biome.peencraft.quartztreebiome": "Obsidiantreebiome",
       "item.peencraft.wood_armor_chestplate": "Wood Chestplate",

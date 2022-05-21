@@ -1,0 +1,53 @@
+{
+  "_fv": 28,
+  "_type": "fluid",
+  "definition": {
+    "name": "Goo",
+    "bucketName": "Goo Bucket",
+    "textureStill": "still",
+    "textureFlowing": "moving",
+    "tintType": "No tint",
+    "canMultiply": false,
+    "flowRate": 3,
+    "levelDecrease": 1,
+    "slopeFindDistance": 4,
+    "spawnParticles": false,
+    "dripParticle": {
+      "value": "CUSTOM:ObsidianTreeBiomeParticles"
+    },
+    "flowStrength": 1.5,
+    "luminosity": 5,
+    "density": 1000,
+    "viscosity": 2000,
+    "isGas": false,
+    "temperature": 300,
+    "type": "WATER",
+    "generateBucket": true,
+    "textureBucket": "",
+    "creativeTab": {
+      "value": "MISC"
+    },
+    "emptySound": {
+      "value": ""
+    },
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "resistance": 100.0,
+    "luminance": 5,
+    "lightOpacity": 0,
+    "emissiveRendering": false,
+    "tickRate": 10,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "colorOnMap": "LIME",
+    "frequencyOnChunks": 5,
+    "spawnWorldTypes": [
+      "CUSTOM:Guguginga"
+    ],
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:Everything"
+      }
+    ]
+  }
+}

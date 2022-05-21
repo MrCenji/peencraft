@@ -39,13 +39,13 @@ import java.util.List;
 import com.google.common.collect.ImmutableList;
 
 public class QuartztreebiomeBiome {
-	public static final Climate.ParameterPoint PARAMETER_POINT = new Climate.ParameterPoint(Climate.Parameter.span(-0.428571428571f, 0.428571428571f),
-			Climate.Parameter.span(0.371428571429f, 1.228571428571f), Climate.Parameter.span(0.081428571429f, 0.938571428571f),
-			Climate.Parameter.span(0.571428571429f, 1.428571428571f), Climate.Parameter.point(0),
-			Climate.Parameter.span(0.546583566394f, 1.403726423536f), 0);
+	public static final Climate.ParameterPoint PARAMETER_POINT = new Climate.ParameterPoint(Climate.Parameter.span(-0.214285714286f, 0.214285714286f),
+			Climate.Parameter.span(0.585714285714f, 1.014285714286f), Climate.Parameter.span(0.295714285714f, 0.724285714286f),
+			Climate.Parameter.span(0.785714285714f, 1.214285714286f), Climate.Parameter.point(0),
+			Climate.Parameter.span(0.760869280679f, 1.189440709251f), 0);
 	public static final Climate.ParameterPoint PARAMETER_POINT_UNDERGROUND = new Climate.ParameterPoint(Climate.Parameter.span(-1, 1),
-			Climate.Parameter.span(-1, 1), Climate.Parameter.span(-2.49f, 3.51f), Climate.Parameter.span(-2f, 4f), Climate.Parameter.span(0.2f, 0.9f),
-			Climate.Parameter.span(-2.024845005035f, 3.975154994965f), 0);
+			Climate.Parameter.span(-1, 1), Climate.Parameter.span(-0.99f, 2.01f), Climate.Parameter.span(-0.5f, 2.5f),
+			Climate.Parameter.span(0.2f, 0.9f), Climate.Parameter.span(-0.524845005035f, 2.475154994965f), 0);
 
 	public static Biome createBiome() {
 		BiomeSpecialEffects effects = new BiomeSpecialEffects.Builder().fogColor(-10066177).waterColor(-65536).waterFogColor(329011)

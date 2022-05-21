@@ -28,8 +28,6 @@ public class GugugingaDimension {
 		public static void registerFillerBlocks(FMLCommonSetupEvent event) {
 			Set<Block> replaceableBlocks = new HashSet<>();
 			replaceableBlocks.add(Blocks.GRAVEL);
-			replaceableBlocks.add(Blocks.GRASS_BLOCK);
-			replaceableBlocks.add(Blocks.STONE);
 			replaceableBlocks.add(Blocks.MOSS_BLOCK);
 			replaceableBlocks.add(Blocks.CALCITE);
 			replaceableBlocks.add(Blocks.MOSS_BLOCK);

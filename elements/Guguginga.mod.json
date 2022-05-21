@@ -4,9 +4,6 @@
   "definition": {
     "biomesInDimension": [
       {
-        "value": "CUSTOM:Everything"
-      },
-      {
         "value": "CUSTOM:Obsidiantreebiome"
       },
       {
