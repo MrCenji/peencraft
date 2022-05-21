@@ -164,6 +164,14 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "quartztreebiome"
+    },
+    {
+      "name": "GugugingaStone",
+      "type": "block",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guguginga_stone"
     }
   ],
   "variable_elements": [],
@@ -175,6 +183,7 @@
       "biome.peencraft.obsidiantreebiome": "Obsidiantreebiome",
       "item.peencraft.wood_armor_boots": "Wood Boots",
       "block.peencraft.zachore": "Zach Ore",
+      "block.peencraft.guguginga_stone": "Guguginga Stone",
       "biome.peencraft.everything": "Everything",
       "item.peencraft.rocks": "Rocks",
       "entity.peencraft.xplosivechiken": "Xplosivechiken",

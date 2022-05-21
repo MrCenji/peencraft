@@ -15,8 +15,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 
-import net.mcreator.peencraft.init.PeencraftModBlocks;
-
 import java.util.Set;
 import java.util.HashSet;
 
@@ -29,7 +27,7 @@ public class GugugingaDimension {
 		@SubscribeEvent
 		public static void registerFillerBlocks(FMLCommonSetupEvent event) {
 			Set<Block> replaceableBlocks = new HashSet<>();
-			replaceableBlocks.add(PeencraftModBlocks.ZACHORE.get());
+			replaceableBlocks.add(Blocks.GRAVEL);
 			replaceableBlocks.add(Blocks.GRASS_BLOCK);
 			replaceableBlocks.add(Blocks.STONE);
 			replaceableBlocks.add(Blocks.MOSS_BLOCK);

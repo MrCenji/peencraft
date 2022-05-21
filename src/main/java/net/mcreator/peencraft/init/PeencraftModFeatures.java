@@ -19,6 +19,7 @@ import net.minecraft.core.Holder;
 
 import net.mcreator.peencraft.world.features.ores.ZachoreFeature;
 import net.mcreator.peencraft.world.features.ores.TestFeature;
+import net.mcreator.peencraft.world.features.ores.GugugingaStoneFeature;
 import net.mcreator.peencraft.PeencraftMod;
 
 import java.util.function.Supplier;
@@ -34,6 +35,9 @@ public class PeencraftModFeatures {
 			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, TestFeature.GENERATE_BIOMES, TestFeature::placedFeature));
 	public static final RegistryObject<Feature<?>> ZACHORE = register("zachore", ZachoreFeature::feature,
 			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, ZachoreFeature.GENERATE_BIOMES, ZachoreFeature::placedFeature));
+	public static final RegistryObject<Feature<?>> GUGUGINGA_STONE = register("guguginga_stone", GugugingaStoneFeature::feature,
+			new FeatureRegistration(GenerationStep.Decoration.UNDERGROUND_ORES, GugugingaStoneFeature.GENERATE_BIOMES,
+					GugugingaStoneFeature::placedFeature));
 
 	private static RegistryObject<Feature<?>> register(String registryname, Supplier<Feature<?>> feature, FeatureRegistration featureRegistration) {
 		FEATURE_REGISTRATIONS.add(featureRegistration);

@@ -15,10 +15,10 @@
     ],
     "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "CUSTOM:Zachore"
+      "value": "Blocks.GRAVEL"
     },
     "fluidBlock": {
-      "value": "CUSTOM:Test"
+      "value": "CUSTOM:GugugingaStone"
     },
     "canRespawnHere": false,
     "hasFog": false,

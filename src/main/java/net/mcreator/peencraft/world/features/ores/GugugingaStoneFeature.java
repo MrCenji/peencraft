@@ -19,6 +19,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.Level;
@@ -35,17 +36,18 @@ import java.util.Set;
 import java.util.Random;
 import java.util.List;
 
-public class ZachoreFeature extends OreFeature {
-	public static ZachoreFeature FEATURE = null;
+public class GugugingaStoneFeature extends OreFeature {
+	public static GugugingaStoneFeature FEATURE = null;
 	public static Holder<ConfiguredFeature<OreConfiguration, ?>> CONFIGURED_FEATURE = null;
 	public static Holder<PlacedFeature> PLACED_FEATURE = null;
 
 	public static Feature<?> feature() {
-		FEATURE = new ZachoreFeature();
-		CONFIGURED_FEATURE = FeatureUtils.register("peencraft:zachore", FEATURE,
-				new OreConfiguration(ZachoreFeatureRuleTest.INSTANCE, PeencraftModBlocks.ZACHORE.get().defaultBlockState(), 5));
-		PLACED_FEATURE = PlacementUtils.register("peencraft:zachore", CONFIGURED_FEATURE, List.of(CountPlacement.of(12), InSquarePlacement.spread(),
-				HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64)), BiomeFilter.biome()));
+		FEATURE = new GugugingaStoneFeature();
+		CONFIGURED_FEATURE = FeatureUtils.register("peencraft:guguginga_stone", FEATURE,
+				new OreConfiguration(GugugingaStoneFeatureRuleTest.INSTANCE, PeencraftModBlocks.GUGUGINGA_STONE.get().defaultBlockState(), 12));
+		PLACED_FEATURE = PlacementUtils.register("peencraft:guguginga_stone", CONFIGURED_FEATURE,
+				List.of(CountPlacement.of(8), InSquarePlacement.spread(),
+						HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(64)), BiomeFilter.biome()));
 		return FEATURE;
 	}
 
@@ -54,10 +56,9 @@ public class ZachoreFeature extends OreFeature {
 	}
 
 	public static final Set<ResourceLocation> GENERATE_BIOMES = null;
-	private final Set<ResourceKey<Level>> generate_dimensions = Set
-			.of(ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("peencraft:guguginga")));
+	private final Set<ResourceKey<Level>> generate_dimensions = Set.of(Level.OVERWORLD);
 
-	public ZachoreFeature() {
+	public GugugingaStoneFeature() {
 		super(OreConfiguration.CODEC);
 	}
 
@@ -69,21 +70,22 @@ public class ZachoreFeature extends OreFeature {
 	}
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-	private static class ZachoreFeatureRuleTest extends RuleTest {
-		static final ZachoreFeatureRuleTest INSTANCE = new ZachoreFeatureRuleTest();
-		private static final com.mojang.serialization.Codec<ZachoreFeatureRuleTest> CODEC = com.mojang.serialization.Codec.unit(() -> INSTANCE);
-		private static final RuleTestType<ZachoreFeatureRuleTest> CUSTOM_MATCH = () -> CODEC;
+	private static class GugugingaStoneFeatureRuleTest extends RuleTest {
+		static final GugugingaStoneFeatureRuleTest INSTANCE = new GugugingaStoneFeatureRuleTest();
+		private static final com.mojang.serialization.Codec<GugugingaStoneFeatureRuleTest> CODEC = com.mojang.serialization.Codec
+				.unit(() -> INSTANCE);
+		private static final RuleTestType<GugugingaStoneFeatureRuleTest> CUSTOM_MATCH = () -> CODEC;
 
 		@SubscribeEvent
 		public static void init(FMLCommonSetupEvent event) {
-			Registry.register(Registry.RULE_TEST, new ResourceLocation("peencraft:zachore_match"), CUSTOM_MATCH);
+			Registry.register(Registry.RULE_TEST, new ResourceLocation("peencraft:guguginga_stone_match"), CUSTOM_MATCH);
 		}
 
 		private List<Block> base_blocks = null;
 
 		public boolean test(BlockState blockAt, Random random) {
 			if (base_blocks == null) {
-				base_blocks = List.of();
+				base_blocks = List.of(Blocks.STONE);
 			}
 			return base_blocks.contains(blockAt.getBlock());
 		}

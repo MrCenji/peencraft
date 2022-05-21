@@ -100,13 +100,10 @@
       "deepslate_enabled": false,
       "ore_veins_enabled": false,
       "default_block": {
-        "Name": "peencraft:zachore"
+        "Name": "minecraft:gravel"
       },
       "default_fluid": {
-        "Name": "peencraft:fakediamond",
-        "Properties": {
-          "facing": "north"
-        }
+        "Name": "peencraft:guguginga_stone"
       },
       "noise": {
         "min_y": -64,

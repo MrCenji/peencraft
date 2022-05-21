@@ -33,6 +33,7 @@ public class PeencraftModItems {
 	public static final RegistryObject<Item> ZACHORE = block(PeencraftModBlocks.ZACHORE, CreativeModeTab.TAB_BUILDING_BLOCKS);
 	public static final RegistryObject<Item> ROCKS = REGISTRY.register("rocks", () -> new RocksItem());
 	public static final RegistryObject<Item> GUGUGINGA = REGISTRY.register("guguginga", () -> new GugugingaItem());
+	public static final RegistryObject<Item> GUGUGINGA_STONE = block(PeencraftModBlocks.GUGUGINGA_STONE, CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

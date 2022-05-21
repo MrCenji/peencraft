@@ -2,7 +2,7 @@
   "_fv": 28,
   "_type": "block",
   "definition": {
-    "texture": "zach_ore",
+    "texture": "guguginga_stone",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -32,16 +32,16 @@
         "subtract": false
       }
     ],
-    "name": "Zach Ore",
+    "name": "Guguginga Stone",
     "specialInfo": [],
     "hardness": 1.75,
-    "resistance": 5.0,
+    "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "BUILDING_BLOCKS"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
@@ -72,7 +72,7 @@
     "isLadder": false,
     "slipperiness": 0.6,
     "speedFactor": 1.0,
-    "jumpFactor": 5.0,
+    "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "isCustomSoundType": false,
@@ -96,7 +96,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 0,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
@@ -122,13 +122,17 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "spawnWorldTypes": [
-      "CUSTOM:Guguginga"
+      "Surface"
     ],
     "restrictionBiomes": [],
-    "blocksToReplace": [],
+    "blocksToReplace": [
+      {
+        "value": "Blocks.STONE#0"
+      }
+    ],
     "generationShape": "UNIFORM",
-    "frequencyPerChunks": 12,
-    "frequencyOnChunk": 5,
+    "frequencyPerChunks": 8,
+    "frequencyOnChunk": 12,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 64
   }
