@@ -30,6 +30,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.Registry;
 import net.minecraft.core.Holder;
 
+import net.mcreator.peencraft.world.biome.ObsidiantreebiomeBiome;
 import net.mcreator.peencraft.world.biome.EverythingBiome;
 import net.mcreator.peencraft.PeencraftMod;
 
@@ -43,11 +44,13 @@ import com.mojang.datafixers.util.Pair;
 public class PeencraftModBiomes {
 	public static final DeferredRegister<Biome> REGISTRY = DeferredRegister.create(ForgeRegistries.BIOMES, PeencraftMod.MODID);
 	public static final RegistryObject<Biome> EVERYTHING = REGISTRY.register("everything", () -> EverythingBiome.createBiome());
+	public static final RegistryObject<Biome> OBSIDIANTREEBIOME = REGISTRY.register("obsidiantreebiome", () -> ObsidiantreebiomeBiome.createBiome());
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			EverythingBiome.init();
+			ObsidiantreebiomeBiome.init();
 		});
 	}
 
@@ -68,6 +71,10 @@ public class PeencraftModBiomes {
 						List<Pair<Climate.ParameterPoint, Holder<Biome>>> parameters = new ArrayList<>(noiseSource.parameters.values());
 						parameters.add(new Pair<>(EverythingBiome.PARAMETER_POINT,
 								biomeRegistry.getOrCreateHolder(ResourceKey.create(Registry.BIOME_REGISTRY, EVERYTHING.getId()))));
+						parameters.add(new Pair<>(ObsidiantreebiomeBiome.PARAMETER_POINT,
+								biomeRegistry.getOrCreateHolder(ResourceKey.create(Registry.BIOME_REGISTRY, OBSIDIANTREEBIOME.getId()))));
+						parameters.add(new Pair<>(ObsidiantreebiomeBiome.PARAMETER_POINT_UNDERGROUND,
+								biomeRegistry.getOrCreateHolder(ResourceKey.create(Registry.BIOME_REGISTRY, OBSIDIANTREEBIOME.getId()))));
 
 						MultiNoiseBiomeSource moddedNoiseSource = new MultiNoiseBiomeSource(new Climate.ParameterList<>(parameters),
 								noiseSource.preset);
@@ -80,8 +87,12 @@ public class PeencraftModBiomes {
 						SurfaceRules.RuleSource currentRuleSource = noiseGeneratorSettings.surfaceRule();
 						if (currentRuleSource instanceof SurfaceRules.SequenceRuleSource sequenceRuleSource) {
 							List<SurfaceRules.RuleSource> surfaceRules = new ArrayList<>(sequenceRuleSource.sequence());
+							surfaceRules.add(1, anySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, OBSIDIANTREEBIOME.getId()),
+									Blocks.MOSS_BLOCK.defaultBlockState(), Blocks.CALCITE.defaultBlockState(), Blocks.OBSIDIAN.defaultBlockState()));
 							surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, EVERYTHING.getId()),
 									Blocks.GRASS_BLOCK.defaultBlockState(), Blocks.STONE.defaultBlockState(), Blocks.GRANITE.defaultBlockState()));
+							surfaceRules.add(1, preliminarySurfaceRule(ResourceKey.create(Registry.BIOME_REGISTRY, OBSIDIANTREEBIOME.getId()),
+									Blocks.MOSS_BLOCK.defaultBlockState(), Blocks.CALCITE.defaultBlockState(), Blocks.OBSIDIAN.defaultBlockState()));
 							NoiseGeneratorSettings moddedNoiseGeneratorSettings = new NoiseGeneratorSettings(noiseGeneratorSettings.noiseSettings(),
 									noiseGeneratorSettings.defaultBlock(), noiseGeneratorSettings.defaultFluid(),
 									noiseGeneratorSettings.noiseRouter(),
@@ -109,6 +120,16 @@ public class PeencraftModBiomes {
 																	SurfaceRules.state(groundBlock)), SurfaceRules.state(underwaterBlock))),
 													SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR),
 															SurfaceRules.state(undergroundBlock)))));
+		}
+
+		private static SurfaceRules.RuleSource anySurfaceRule(ResourceKey<Biome> biomeKey, BlockState groundBlock, BlockState undergroundBlock,
+				BlockState underwaterBlock) {
+			return SurfaceRules.ifTrue(SurfaceRules.isBiome(biomeKey),
+					SurfaceRules.sequence(
+							SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, false, 0, CaveSurface.FLOOR),
+									SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.waterBlockCheck(-1, 0), SurfaceRules.state(groundBlock)),
+											SurfaceRules.state(underwaterBlock))),
+							SurfaceRules.ifTrue(SurfaceRules.stoneDepthCheck(0, true, 0, CaveSurface.FLOOR), SurfaceRules.state(undergroundBlock))));
 		}
 	}
 }
