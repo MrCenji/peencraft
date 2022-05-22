@@ -36,7 +36,7 @@ public class PeencraftModEntities {
 			EntityType.Builder.<KillerMouseEntity>of(KillerMouseEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KillerMouseEntity::new)
 
-					.sized(0.7999999999999999f, 2.2f));
+					.sized(0.4f, 0.3f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
