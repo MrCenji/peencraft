@@ -7,6 +7,6 @@ import net.minecraft.world.level.Explosion;
 public class VilligaEntityIsHurtProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (world instanceof Level _level && !_level.isClientSide())
-			_level.explode(null, x, y, z, 100, Explosion.BlockInteraction.BREAK);
+			_level.explode(null, x, y, z, 10, Explosion.BlockInteraction.BREAK);
 	}
 }
