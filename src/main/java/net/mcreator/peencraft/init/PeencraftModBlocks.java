@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 
 import net.mcreator.peencraft.block.ZachoreBlock;
 import net.mcreator.peencraft.block.TestBlock;
+import net.mcreator.peencraft.block.HentaiBlockBlock;
 import net.mcreator.peencraft.block.GugugingaStoneBlock;
 import net.mcreator.peencraft.block.GugugingaPortalBlock;
 import net.mcreator.peencraft.block.GooBlock;
@@ -24,4 +25,5 @@ public class PeencraftModBlocks {
 	public static final RegistryObject<Block> GUGUGINGA_PORTAL = REGISTRY.register("guguginga_portal", () -> new GugugingaPortalBlock());
 	public static final RegistryObject<Block> GUGUGINGA_STONE = REGISTRY.register("guguginga_stone", () -> new GugugingaStoneBlock());
 	public static final RegistryObject<Block> GOO = REGISTRY.register("goo", () -> new GooBlock());
+	public static final RegistryObject<Block> HENTAI_BLOCK = REGISTRY.register("hentai_block", () -> new HentaiBlockBlock());
 }
