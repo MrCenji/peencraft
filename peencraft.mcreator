@@ -262,10 +262,35 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "ak_47"
+    },
+    {
+      "name": "YoshiGUI",
+      "type": "gui",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yoshi_gui"
+    },
+    {
+      "name": "Yoshi",
+      "type": "livingentity",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yoshi"
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "yoshi",
+      "files": [
+        "yoshis_mlem__sound_effect"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    }
+  ],
   "language_map": {
     "en_us": {
       "entity.peencraft.killer_mouse": "Killer Mouse",
@@ -273,23 +298,26 @@
       "biome.peencraft.obsidiantreebiome": "Obsidiantreebiome",
       "item.peencraft.wood_armor_boots": "Wood Boots",
       "item.peencraft.cum_bucket": "Cum Bucket",
-      "block.peencraft.zachore": "Zach Ore",
       "fluid.peencraft.cum": "Cum",
+      "block.peencraft.zachore": "Zach Ore",
       "fluid.peencraft.goo": "Goo",
       "biome.peencraft.quartztreebiome": "Obsidiantreebiome",
-      "item.peencraft.guguginga": "Guguginga Portal Igniter",
       "entity.peencraft.villiga": "Villiga",
+      "item.peencraft.guguginga": "Guguginga Portal Igniter",
       "item.peencraft.wood_armor_helmet": "Wood Helmet",
       "item.peencraft.wood_armor_leggings": "Wood Leggings",
       "item.peencraft.tyrone_spawn_egg": "Tyrone Spawn Egg",
+      "subtitles.yoshi": "",
       "item.peencraft.goo_bucket": "Goo Bucket",
       "item.peencraft.killer_mouse_spawn_egg": "Killer Mouse Spawn Egg",
       "item.peencraft.ak_47": "AK 47",
+      "entity.peencraft.yoshi": "Yoshi",
       "block.peencraft.guguginga_stone": "Guguginga Stone",
       "item.peencraft.rocks": "Rocks",
       "block.peencraft.goo": "Goo",
       "item.peencraft.bullet": "Bullet",
       "entity.peencraft.xplosivechiken": "Xplosivechiken",
+      "item.peencraft.yoshi_spawn_egg": "Yoshi Spawn Egg",
       "item.peencraft.wood_armor_chestplate": "Wood Chestplate",
       "item.peencraft.xplosivechiken_spawn_egg": "Xplosivechiken Spawn Egg",
       "block.peencraft.hentai_block": "Hentai Block",

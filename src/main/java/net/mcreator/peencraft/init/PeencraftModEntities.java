@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.peencraft.entity.YoshiEntity;
 import net.mcreator.peencraft.entity.XplosivechikenEntity;
 import net.mcreator.peencraft.entity.VilligaEntity;
 import net.mcreator.peencraft.entity.TyroneEntity;
@@ -47,6 +48,11 @@ public class PeencraftModEntities {
 	public static final RegistryObject<EntityType<Ak47Entity>> AK_47 = register("projectile_ak_47",
 			EntityType.Builder.<Ak47Entity>of(Ak47Entity::new, MobCategory.MISC).setCustomClientFactory(Ak47Entity::new)
 					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<YoshiEntity>> YOSHI = register("yoshi",
+			EntityType.Builder.<YoshiEntity>of(YoshiEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(32)
+					.setUpdateInterval(3).setCustomClientFactory(YoshiEntity::new)
+
+					.sized(0.6f, 1.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -59,6 +65,7 @@ public class PeencraftModEntities {
 			TyroneEntity.init();
 			KillerMouseEntity.init();
 			VilligaEntity.init();
+			YoshiEntity.init();
 		});
 	}
 
@@ -68,5 +75,6 @@ public class PeencraftModEntities {
 		event.put(TYRONE.get(), TyroneEntity.createAttributes().build());
 		event.put(KILLER_MOUSE.get(), KillerMouseEntity.createAttributes().build());
 		event.put(VILLIGA.get(), VilligaEntity.createAttributes().build());
+		event.put(YOSHI.get(), YoshiEntity.createAttributes().build());
 	}
 }

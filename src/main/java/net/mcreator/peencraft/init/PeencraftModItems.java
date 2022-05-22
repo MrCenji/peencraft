@@ -47,6 +47,8 @@ public class PeencraftModItems {
 	public static final RegistryObject<Item> CUM_BUCKET = REGISTRY.register("cum_bucket", () -> new CumItem());
 	public static final RegistryObject<Item> BULLET = REGISTRY.register("bullet", () -> new BulletItem());
 	public static final RegistryObject<Item> AK_47 = REGISTRY.register("ak_47", () -> new Ak47Item());
+	public static final RegistryObject<Item> YOSHI = REGISTRY.register("yoshi_spawn_egg",
+			() -> new ForgeSpawnEggItem(PeencraftModEntities.YOSHI, -16711936, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

@@ -1,0 +1,11 @@
+{
+  "yoshi": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "peencraft:yoshis_mlem__sound_effect",
+        "stream": false
+      }
+    ]
+  }
+}
