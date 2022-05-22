@@ -23,7 +23,6 @@ import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.EatBlockGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -46,7 +45,7 @@ import net.mcreator.peencraft.init.PeencraftModEntities;
 public class TyroneEntity extends EnderMan {
 	@SubscribeEvent
 	public static void addLivingEntityToBiomes(BiomeLoadingEvent event) {
-		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(PeencraftModEntities.TYRONE.get(), 6, 1, 1));
+		event.getSpawns().getSpawner(MobCategory.MONSTER).add(new MobSpawnSettings.SpawnerData(PeencraftModEntities.TYRONE.get(), 9, 1, 1));
 	}
 
 	public TyroneEntity(PlayMessages.SpawnEntity packet, Level world) {
@@ -77,9 +76,8 @@ public class TyroneEntity extends EnderMan {
 		this.goalSelector.addGoal(3, new EatBlockGoal(this));
 		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(6, new FloatGoal(this));
-		this.goalSelector.addGoal(7, new TemptGoal(this, 1, Ingredient.of(Items.COOKED_CHICKEN), false));
-		this.goalSelector.addGoal(8, new TemptGoal(this, 1, Ingredient.of(Items.MELON_SLICE), false));
+		this.goalSelector.addGoal(6, new TemptGoal(this, 1, Ingredient.of(Items.COOKED_CHICKEN), false));
+		this.goalSelector.addGoal(7, new TemptGoal(this, 1, Ingredient.of(Items.MELON_SLICE), false));
 	}
 
 	@Override
