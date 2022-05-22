@@ -16,6 +16,6 @@ public class VilligaRenderer extends MobRenderer<VilligaEntity, VillagerModel<Vi
 
 	@Override
 	public ResourceLocation getTextureLocation(VilligaEntity entity) {
-		return new ResourceLocation("peencraft:textures/black_villager.png");
+		return new ResourceLocation("peencraft:textures/s_k_i_n_1.png");
 	}
 }

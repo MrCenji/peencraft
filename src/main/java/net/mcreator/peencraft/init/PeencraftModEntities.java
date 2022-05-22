@@ -20,6 +20,7 @@ import net.mcreator.peencraft.entity.XplosivechikenEntity;
 import net.mcreator.peencraft.entity.VilligaEntity;
 import net.mcreator.peencraft.entity.TyroneEntity;
 import net.mcreator.peencraft.entity.KillerMouseEntity;
+import net.mcreator.peencraft.entity.Ak47Entity;
 import net.mcreator.peencraft.PeencraftMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -35,7 +36,7 @@ public class PeencraftModEntities {
 					.sized(0.7f, 2.25f));
 	public static final RegistryObject<EntityType<KillerMouseEntity>> KILLER_MOUSE = register("killer_mouse",
 			EntityType.Builder.<KillerMouseEntity>of(KillerMouseEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KillerMouseEntity::new)
+					.setTrackingRange(200).setUpdateInterval(3).setCustomClientFactory(KillerMouseEntity::new)
 
 					.sized(0.4f, 0.3f));
 	public static final RegistryObject<EntityType<VilligaEntity>> VILLIGA = register("villiga",
@@ -43,6 +44,9 @@ public class PeencraftModEntities {
 					.setUpdateInterval(3).setCustomClientFactory(VilligaEntity::new)
 
 					.sized(0.6f, 1.95f));
+	public static final RegistryObject<EntityType<Ak47Entity>> AK_47 = register("projectile_ak_47",
+			EntityType.Builder.<Ak47Entity>of(Ak47Entity::new, MobCategory.MISC).setCustomClientFactory(Ak47Entity::new)
+					.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

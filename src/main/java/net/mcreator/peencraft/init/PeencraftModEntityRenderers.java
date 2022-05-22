@@ -9,6 +9,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+
 import net.mcreator.peencraft.client.renderer.XplosivechikenRenderer;
 import net.mcreator.peencraft.client.renderer.VilligaRenderer;
 import net.mcreator.peencraft.client.renderer.TyroneRenderer;
@@ -22,5 +24,6 @@ public class PeencraftModEntityRenderers {
 		event.registerEntityRenderer(PeencraftModEntities.TYRONE.get(), TyroneRenderer::new);
 		event.registerEntityRenderer(PeencraftModEntities.KILLER_MOUSE.get(), KillerMouseRenderer::new);
 		event.registerEntityRenderer(PeencraftModEntities.VILLIGA.get(), VilligaRenderer::new);
+		event.registerEntityRenderer(PeencraftModEntities.AK_47.get(), ThrownItemRenderer::new);
 	}
 }
