@@ -39,7 +39,7 @@ public class PeencraftModEntities {
 
 					.sized(0.4f, 0.3f));
 	public static final RegistryObject<EntityType<VilligaEntity>> VILLIGA = register("villiga",
-			EntityType.Builder.<VilligaEntity>of(VilligaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(150)
+			EntityType.Builder.<VilligaEntity>of(VilligaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(50)
 					.setUpdateInterval(3).setCustomClientFactory(VilligaEntity::new).fireImmune().sized(0.6f, 1.95f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
