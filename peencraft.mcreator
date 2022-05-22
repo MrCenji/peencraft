@@ -207,34 +207,6 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "villiga"
-    },
-    {
-      "name": "VilligaEntityIsHurt",
-      "type": "procedure",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "villiga_entity_is_hurt",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [],
