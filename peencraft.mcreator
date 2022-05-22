@@ -199,15 +199,52 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "hentai_block"
+    },
+    {
+      "name": "Villiga",
+      "type": "livingentity",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "villiga"
+    },
+    {
+      "name": "VilligaEntityIsHurt",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "villiga_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.peencraft.wood_armor_leggings": "Wood Leggings",
       "entity.peencraft.killer_mouse": "Killer Mouse",
+      "item.peencraft.wood_armor_leggings": "Wood Leggings",
       "item.peencraft.tyrone_spawn_egg": "Tyrone Spawn Egg",
+      "item.peencraft.villiga_spawn_egg": "Villiga Spawn Egg",
       "item.peencraft.goo_bucket": "Goo Bucket",
       "item.peencraft.killer_mouse_spawn_egg": "Killer Mouse Spawn Egg",
       "biome.peencraft.obsidiantreebiome": "Obsidiantreebiome",
@@ -222,6 +259,7 @@
       "item.peencraft.wood_armor_chestplate": "Wood Chestplate",
       "item.peencraft.xplosivechiken_spawn_egg": "Xplosivechiken Spawn Egg",
       "item.peencraft.guguginga": "Guguginga Portal Igniter",
+      "entity.peencraft.villiga": "Villiga",
       "block.peencraft.hentai_block": "Hentai Block",
       "item.peencraft.wood_armor_helmet": "Wood Helmet",
       "block.peencraft.fakediamond": "Diamond Ore",

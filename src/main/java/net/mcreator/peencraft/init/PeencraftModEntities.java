@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.peencraft.entity.XplosivechikenEntity;
+import net.mcreator.peencraft.entity.VilligaEntity;
 import net.mcreator.peencraft.entity.TyroneEntity;
 import net.mcreator.peencraft.entity.KillerMouseEntity;
 import net.mcreator.peencraft.PeencraftMod;
@@ -37,6 +38,9 @@ public class PeencraftModEntities {
 					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KillerMouseEntity::new)
 
 					.sized(0.4f, 0.3f));
+	public static final RegistryObject<EntityType<VilligaEntity>> VILLIGA = register("villiga",
+			EntityType.Builder.<VilligaEntity>of(VilligaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(150)
+					.setUpdateInterval(3).setCustomClientFactory(VilligaEntity::new).fireImmune().sized(0.6f, 1.95f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -48,6 +52,7 @@ public class PeencraftModEntities {
 			XplosivechikenEntity.init();
 			TyroneEntity.init();
 			KillerMouseEntity.init();
+			VilligaEntity.init();
 		});
 	}
 
@@ -56,5 +61,6 @@ public class PeencraftModEntities {
 		event.put(XPLOSIVECHIKEN.get(), XplosivechikenEntity.createAttributes().build());
 		event.put(TYRONE.get(), TyroneEntity.createAttributes().build());
 		event.put(KILLER_MOUSE.get(), KillerMouseEntity.createAttributes().build());
+		event.put(VILLIGA.get(), VilligaEntity.createAttributes().build());
 	}
 }
