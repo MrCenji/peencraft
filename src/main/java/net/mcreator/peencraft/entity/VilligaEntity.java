@@ -89,14 +89,6 @@ public class VilligaEntity extends Monster {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.villager.death"));
 	}
 
-	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		VilligaEntityIsHurtProcedure.execute(
-
-		);
-		return super.hurt(source, amount);
-	}
-
 	public static void init() {
 		SpawnPlacements.register(PeencraftModEntities.VILLIGA.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL
