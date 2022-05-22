@@ -20,7 +20,7 @@ import net.mcreator.peencraft.entity.Ak47Entity;
 
 public class Ak47Item extends Item {
 	public Ak47Item() {
-		super(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).durability(64));
+		super(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).durability(100));
 	}
 
 	@Override
@@ -40,7 +40,8 @@ public class Ak47Item extends Item {
 	}
 
 	@Override
-	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entityLiving, int timeLeft) {
+	public void onUsingTick(ItemStack itemstack, LivingEntity entityLiving, int count) {
+		Level world = entityLiving.level;
 		if (!world.isClientSide() && entityLiving instanceof ServerPlayer entity) {
 			double x = entity.getX();
 			double y = entity.getY();
@@ -57,7 +58,7 @@ public class Ak47Item extends Item {
 					}
 				}
 				if (entity.getAbilities().instabuild || stack != ItemStack.EMPTY) {
-					Ak47Entity entityarrow = Ak47Entity.shoot(world, entity, world.getRandom(), 1.2999999999999998f, 5, 4);
+					Ak47Entity entityarrow = Ak47Entity.shoot(world, entity, world.getRandom(), 1.5f, 3, 4);
 					itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 					if (entity.getAbilities().instabuild) {
 						entityarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
@@ -76,6 +77,7 @@ public class Ak47Item extends Item {
 						}
 					}
 				}
+				entity.releaseUsingItem();
 			}
 		}
 	}

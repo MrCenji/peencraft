@@ -14,8 +14,8 @@
     "ammoItem": {
       "value": "CUSTOM:Bullet"
     },
-    "shootConstantly": false,
-    "usageCount": 64,
+    "shootConstantly": true,
+    "usageCount": 100,
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
@@ -23,8 +23,8 @@
     "animation": "bow",
     "enableMeleeDamage": false,
     "damageVsEntity": 5.0,
-    "bulletPower": 1.2999999999999998,
-    "bulletDamage": 5.0,
+    "bulletPower": 1.5,
+    "bulletDamage": 3.0,
     "bulletKnockback": 4,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
