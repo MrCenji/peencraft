@@ -246,6 +246,34 @@
       "metadata": {
         "gb": true
       }
+    },
+    {
+      "name": "BedCum",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bed_cum",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -257,12 +285,12 @@
       "biome.peencraft.obsidiantreebiome": "Obsidiantreebiome",
       "item.peencraft.wood_armor_boots": "Wood Boots",
       "item.peencraft.cum_bucket": "Cum Bucket",
-      "block.peencraft.zachore": "Zach Ore",
       "fluid.peencraft.cum": "Cum",
+      "block.peencraft.zachore": "Zach Ore",
       "fluid.peencraft.goo": "Goo",
       "biome.peencraft.quartztreebiome": "Obsidiantreebiome",
-      "item.peencraft.guguginga": "Guguginga Portal Igniter",
       "entity.peencraft.villiga": "Villiga",
+      "item.peencraft.guguginga": "Guguginga Portal Igniter",
       "item.peencraft.wood_armor_helmet": "Wood Helmet",
       "item.peencraft.wood_armor_leggings": "Wood Leggings",
       "item.peencraft.tyrone_spawn_egg": "Tyrone Spawn Egg",
