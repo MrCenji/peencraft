@@ -18,6 +18,7 @@ import net.mcreator.peencraft.item.WoodArmorItem;
 import net.mcreator.peencraft.item.RocksItem;
 import net.mcreator.peencraft.item.GugugingaItem;
 import net.mcreator.peencraft.item.GooItem;
+import net.mcreator.peencraft.item.CumItem;
 import net.mcreator.peencraft.PeencraftMod;
 
 public class PeencraftModItems {
@@ -41,6 +42,7 @@ public class PeencraftModItems {
 	public static final RegistryObject<Item> HENTAI_BLOCK = block(PeencraftModBlocks.HENTAI_BLOCK, CreativeModeTab.TAB_DECORATIONS);
 	public static final RegistryObject<Item> VILLIGA = REGISTRY.register("villiga_spawn_egg",
 			() -> new ForgeSpawnEggItem(PeencraftModEntities.VILLIGA, -6684877, -16751104, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+	public static final RegistryObject<Item> CUM_BUCKET = REGISTRY.register("cum_bucket", () -> new CumItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

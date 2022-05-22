@@ -16,6 +16,7 @@ import net.mcreator.peencraft.block.HentaiBlockBlock;
 import net.mcreator.peencraft.block.GugugingaStoneBlock;
 import net.mcreator.peencraft.block.GugugingaPortalBlock;
 import net.mcreator.peencraft.block.GooBlock;
+import net.mcreator.peencraft.block.CumBlock;
 import net.mcreator.peencraft.PeencraftMod;
 
 public class PeencraftModBlocks {
@@ -26,4 +27,5 @@ public class PeencraftModBlocks {
 	public static final RegistryObject<Block> GUGUGINGA_STONE = REGISTRY.register("guguginga_stone", () -> new GugugingaStoneBlock());
 	public static final RegistryObject<Block> GOO = REGISTRY.register("goo", () -> new GooBlock());
 	public static final RegistryObject<Block> HENTAI_BLOCK = REGISTRY.register("hentai_block", () -> new HentaiBlockBlock());
+	public static final RegistryObject<Block> CUM = REGISTRY.register("cum", () -> new CumBlock());
 }
