@@ -1,8 +1,26 @@
 
 package net.mcreator.peencraft.fluid;
 
-public abstract class CumFluid extends ForgeFlowingFluid {
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.fluids.ForgeFlowingFluid;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluid;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.LiquidBlock;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.peencraft.init.PeencraftModItems;
+import net.mcreator.peencraft.init.PeencraftModFluids;
+import net.mcreator.peencraft.init.PeencraftModBlocks;
+import net.mcreator.peencraft.fluid.attributes.CumFluidAttributes;
+
+public abstract class CumFluid extends ForgeFlowingFluid {
 	public static final ForgeFlowingFluid.Properties PROPERTIES = new ForgeFlowingFluid.Properties(PeencraftModFluids.CUM,
 			PeencraftModFluids.FLOWING_CUM,
 			CumFluidAttributes.builder(new ResourceLocation("peencraft:blocks/cum"), new ResourceLocation("peencraft:blocks/cum"))
@@ -57,5 +75,4 @@ public abstract class CumFluid extends ForgeFlowingFluid {
 			return false;
 		}
 	}
-
 }

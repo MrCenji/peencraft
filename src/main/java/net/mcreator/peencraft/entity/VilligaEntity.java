@@ -31,7 +31,6 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.peencraft.procedures.VilligaEntityIsHurtProcedure;
 import net.mcreator.peencraft.init.PeencraftModEntities;
 
 @Mod.EventBusSubscriber
@@ -92,7 +91,9 @@ public class VilligaEntity extends Monster {
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
-		VilligaEntityIsHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+		VilligaEntityIsHurtProcedure.execute(
+
+		);
 		return super.hurt(source, amount);
 	}
 
