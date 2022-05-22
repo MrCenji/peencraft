@@ -52,7 +52,7 @@ public class PeencraftModEntities {
 			EntityType.Builder.<YoshiEntity>of(YoshiEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(32)
 					.setUpdateInterval(3).setCustomClientFactory(YoshiEntity::new)
 
-					.sized(0.6f, 1.5f));
+					.sized(0.7999999999999999f, 2.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

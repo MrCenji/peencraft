@@ -11,7 +11,7 @@ import net.mcreator.peencraft.entity.YoshiEntity;
 
 public class YoshiRenderer extends MobRenderer<YoshiEntity, ChickenModel<YoshiEntity>> {
 	public YoshiRenderer(EntityRendererProvider.Context context) {
-		super(context, new ChickenModel(context.bakeLayer(ModelLayers.CHICKEN)), 0.7000000000000001f);
+		super(context, new ChickenModel(context.bakeLayer(ModelLayers.CHICKEN)), 0.9f);
 	}
 
 	@Override
