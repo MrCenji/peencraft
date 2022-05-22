@@ -108,6 +108,8 @@ public class VilligaEntity extends Monster {
 			return false;
 		if (source == DamageSource.LIGHTNING_BOLT)
 			return false;
+		if (source.isExplosion())
+			return false;
 		if (source.getMsgId().equals("trident"))
 			return false;
 		if (source == DamageSource.ANVIL)
