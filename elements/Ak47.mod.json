@@ -23,15 +23,18 @@
     "animation": "bow",
     "enableMeleeDamage": false,
     "damageVsEntity": 5.0,
-    "bulletPower": 1.5,
+    "bulletPower": 3.5,
     "bulletDamage": 3.0,
     "bulletKnockback": 4,
-    "bulletParticles": false,
+    "bulletParticles": true,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
       "value": "CUSTOM:Bullet"
     },
     "bulletModel": "Default",
-    "customBulletModelTexture": ""
+    "customBulletModelTexture": "",
+    "onBulletHitsEntity": {
+      "name": "Ak47ProjectileHitsLivingEntity"
+    }
   }
 }

@@ -278,6 +278,34 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "yoshi"
+    },
+    {
+      "name": "Ak47ProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ak_47_projectile_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -296,10 +324,10 @@
       "entity.peencraft.killer_mouse": "Killer Mouse",
       "item.peencraft.villiga_spawn_egg": "Villiga Spawn Egg",
       "biome.peencraft.obsidiantreebiome": "Obsidiantreebiome",
-      "item.peencraft.cum_bucket": "Cum Bucket",
       "item.peencraft.wood_armor_boots": "Wood Boots",
-      "block.peencraft.zachore": "Zach Ore",
+      "item.peencraft.cum_bucket": "Cum Bucket",
       "fluid.peencraft.cum": "Cum",
+      "block.peencraft.zachore": "Zach Ore",
       "fluid.peencraft.goo": "Goo",
       "biome.peencraft.quartztreebiome": "Obsidiantreebiome",
       "entity.peencraft.villiga": "Villiga",

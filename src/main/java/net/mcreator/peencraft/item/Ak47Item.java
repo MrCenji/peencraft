@@ -58,7 +58,7 @@ public class Ak47Item extends Item {
 					}
 				}
 				if (entity.getAbilities().instabuild || stack != ItemStack.EMPTY) {
-					Ak47Entity entityarrow = Ak47Entity.shoot(world, entity, world.getRandom(), 1.5f, 3, 4);
+					Ak47Entity entityarrow = Ak47Entity.shoot(world, entity, world.getRandom(), 3.5f, 3, 4);
 					itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 					if (entity.getAbilities().instabuild) {
 						entityarrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
